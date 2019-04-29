@@ -7,7 +7,7 @@ body {
 	width: 200px;
 	height: 200px;
 	border: 1px solid #000;
-	background-image: url(./assets/picture.jpg);
+	background-image: url(../assets/picture.jpg);
 	background-repeat: no-repeat;
 	background-position: center center;
 }

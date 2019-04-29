@@ -1,12 +1,11 @@
 import React from 'react';
-import logo from '../../assets/logo.svg';
-import './App.css';
+import ComponentTest from '../../containers/ComponentTest';
 
 export default class App extends React.Component {
 	render() {
 		return (
 			<div>
-				<img src={logo} />
+				<ComponentTest />
 			</div>
 		);
 	}
