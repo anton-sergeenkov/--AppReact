@@ -1,15 +1,12 @@
 import React from 'react';
 import AppChild from '../AppChild/AppChild';
 import logo from '../../assets/logo.svg';
-import classes from './App.css';
+import classes from './App.scss';
 
 const style = {
 	width: '200px',
 	height: '200px',
-	background: 'yellowgreen',
-	':hover': {
-		background: 'orange'
-	}
+	border: '2px solid yellowgreen'
 }
 
 export default class App extends React.Component {

@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
 	mode: 'development',
@@ -8,7 +8,7 @@ module.exports = {
     entry: './src/index.js',
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'build')
 	},
 	devServer: {
 		contentBase: './dist'
@@ -24,6 +24,27 @@ module.exports = {
 						presets: ['@babel/preset-env', '@babel/preset-react']
 					}
 				}
+			},
+			{
+				test: /\.scss/,
+				use: [
+					MiniCssExtractPlugin.loader,
+					{
+						loader: 'css-loader',
+						options: {
+							importLoaders: 1,
+							modules: true,
+							localIdentName: '[name]__[local]__[hash:base64:5]',
+							sourceMap: true
+						}
+					},
+					{
+						loader: 'sass-loader',
+						options: {
+							sourceMap: true
+						}
+					},
+				]
 			},
             {
                 test: /\.css$/,
