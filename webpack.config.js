@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const autoprefixer = require('autoprefixer');
 
 module.exports = {
 	mode: 'development',
@@ -38,6 +39,19 @@ module.exports = {
 							sourceMap: true
 						}
 					},
+
+					{
+					    loader: 'postcss-loader',
+					    options: {
+					        plugins: [
+					            autoprefixer({
+					                browsers:['ie >= 8', 'last 4 version']
+					            })
+					        ],
+					        sourceMap: true
+					    }
+					},
+
 					{
 						loader: 'sass-loader',
 						options: {
