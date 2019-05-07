@@ -1,0 +1,6 @@
+@import '../../styles/vars';
+
+.headerItem {
+    background: $color-light;
+    padding: 10px;
+}

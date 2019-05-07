@@ -1,7 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const autoprefixer = require('autoprefixer');
 
 module.exports = {
 	mode: 'development',
@@ -27,7 +26,7 @@ module.exports = {
 				}
 			},
 			{
-				test: /\.scss/,
+				test: /\.(css|scss)/,
 				use: [
 					MiniCssExtractPlugin.loader,
 					{
@@ -39,19 +38,13 @@ module.exports = {
 							sourceMap: true
 						}
 					},
-
 					{
 					    loader: 'postcss-loader',
 					    options: {
-					        plugins: [
-					            autoprefixer({
-					                browsers:['ie >= 8', 'last 4 version']
-					            })
-					        ],
+							config: { path: './postcss.config.js' },
 					        sourceMap: true
 					    }
 					},
-
 					{
 						loader: 'sass-loader',
 						options: {
@@ -60,20 +53,6 @@ module.exports = {
 					},
 				]
 			},
-            {
-                test: /\.css$/,
-                use: [
-					MiniCssExtractPlugin.loader,
-					{
-						loader: 'css-loader',
-						options: {
-							importLoaders: 1,
-							modules: true,
-							localIdentName: '[name]__[local]__[hash:base64:5]'
-						}
-					}
-				]
-            },
 			{
 				test: /\.(png|jpg|svg|gif)$/,
 				use: [

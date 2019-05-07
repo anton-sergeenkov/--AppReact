@@ -1,14 +1,6 @@
+@import './vars';
+@import './mixins';
+
 body {
-	margin: 0;
-	padding: 0;
-	background: white;
-	display: flex;
-}
-.img {
-	width: 200px;
-	height: 200px;
-	border: 1px solid #000;
-	background-image: url(../assets/picture.jpg);
-	background-repeat: no-repeat;
-	background-position: center center;
+    //
 }

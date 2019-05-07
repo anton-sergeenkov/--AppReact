@@ -1,0 +1,43 @@
+//------------------------------------------------------------------------------
+// IMAGE
+//------------------------------------------------------------------------------
+@mixin img-cover-center {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+@mixin img-cover-top {
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: cover;
+}
+@mixin img-contain-center {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+}
+@mixin img-contain-top {
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: contain;
+}
+
+@mixin flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+@mixin full-screen {
+	width: 100%;
+	height: 100vh;
+}
+@mixin full-size-block {
+	width: 100%;
+	height: 100%;
+}
+@mixin btn-clear {
+	cursor: pointer;
+	border: none;
+	outline: none;
+	background: none;
+}
