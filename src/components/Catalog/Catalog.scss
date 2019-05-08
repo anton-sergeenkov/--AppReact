@@ -1,0 +1,29 @@
+@import './src/styles/vars';
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+.element {
+    width: 250px;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: $box-shadow;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    .name {
+        padding: 10px;
+        text-align: center;
+    }
+    .img {
+        display: block;
+        height: 200px;
+        margin: 10px auto;
+    }
+    .price {
+        padding: 10px;
+        text-align: center;
+    }
+}

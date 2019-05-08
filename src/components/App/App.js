@@ -1,11 +1,11 @@
 import React from 'react';
-import Logo from '../Logo/Logo';
+import Catalog from '../Catalog/Catalog';
 
 export default class App extends React.Component {
 	render() {
 		return (
 			<div>
-				<Logo />
+				<Catalog />
 			</div>
 		);
 	}
