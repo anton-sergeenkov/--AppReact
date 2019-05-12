@@ -15,7 +15,9 @@ module.exports = {
 		contentBase: './dist',
 		historyApiFallback: {
 			disableDotRule: true
-		}
+		},
+		stats: 'errors-only',
+		port: 3000
 	},
 	module: {
 		rules: [

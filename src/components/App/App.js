@@ -1,19 +1,15 @@
 import React, {Component} from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import Menu from '../Menu/Menu';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Header from '../Header/Header';
 import Catalog from '../Catalog/Catalog';
 
 export default class App extends Component {
 	render() {
 		return (
 			<Router>
-				<div>
-					<Menu />
-					<Route path="/catalog" component={Catalog} />
-				</div>
+				<Header />
+				<Route path="/catalog" component={Catalog} />
 			</Router>
 		);
 	}
 }
-
-// <Catalog />

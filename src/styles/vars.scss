@@ -5,9 +5,16 @@ $fsize-content:    18px;
 $fsize-text-small: 15px;
 $fsize-btn:        13px;
 
-$color-lighter: #ffffff;
-$color-light: #f4f4f4;
-$color-accent: #209c89;
+$color-light:       #f4f4f4;  // light-gray
+$color-accent:      #0ba8a0;  // blue-green
+$color-accent-text: #9acd32;  // ligth-green
+$color-text:        #a3a3a3;  // dark-gray
+
+$color-error:   #e283ae; // dark pink
+$color-green:   #4aaf2d; // green
+$color-crimson: #bf7abe; // crimson
+$color-brown:   #b3b768; // gold
+$color-violet:  #4707b7; // violet
 
 $box-shadow:
     0 16px 24px 2px rgba(33,37,41,.02),
