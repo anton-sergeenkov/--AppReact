@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {Component} from 'react';
 import axios from 'axios';
 import catalogList from '../../assets/catalog.json';
 import classes from './Catalog.scss';
 
-export default class Catalog extends React.Component {
+export default class Catalog extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -21,12 +21,9 @@ export default class Catalog extends React.Component {
 		);
 
 		return (
-			<div>
-				<div className={classes.wrapper}>
-					{items}
-				</div>
+			<div className={classes.wrapper}>
+				{items}
 			</div>
 		);
-
 	}
 }
