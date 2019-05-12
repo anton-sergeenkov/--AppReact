@@ -4,6 +4,10 @@
     display: flex;
     flex-wrap: wrap;
     padding: 10px;
+    a {
+        color: #000;
+        text-decoration: none;
+    }
 }
 .element {
     display: flex;
@@ -13,6 +17,10 @@
     margin: 10px;
     padding: 20px;
     box-shadow: $box-shadow;
+    &:hover {
+        box-shadow: $box-shadow-active;
+        transition: 0.4s;
+    }
     .name {
         padding: 10px;
         text-align: center;

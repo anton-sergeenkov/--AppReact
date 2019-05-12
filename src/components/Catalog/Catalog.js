@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import classes from './Catalog.scss';
 
@@ -20,12 +21,15 @@ export default class Catalog extends Component {
 	}
 	render() {
 		const catalog = this.state.catalog;
+
 		const items = catalog.map((item) =>
-			<div className={classes.element} key={item.id}>
-				<div className={classes.name}>{item.name}</div>
-				<img className={classes.img} src={item.img} alt={item.name} />
-				<div className={classes.price}>{item.price} USD</div>
-			</div>
+			<Link to={`/catalog/${item.id}`} key={item.id}>
+				<div className={classes.element}>
+					<div className={classes.name}>{item.name}</div>
+					<img className={classes.img} src={item.img} alt={item.name} />
+					<div className={classes.price}>{item.price} USD</div>
+				</div>
+			</Link>
 		);
 
 		return (
