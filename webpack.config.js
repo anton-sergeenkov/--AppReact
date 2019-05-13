@@ -17,7 +17,7 @@ module.exports = {
 			disableDotRule: true
 		},
 		stats: 'errors-only',
-		port: 3000
+		port: 3001
 	},
 	module: {
 		rules: [
