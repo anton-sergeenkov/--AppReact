@@ -11,7 +11,7 @@ export default class Catalog extends Component {
 		};
 	}
 	componentDidMount() {
-		axios.get('https://api.myjson.com/bins/9yy7i')
+		axios.get('http://anton-sergeenkov.ru/app/json/index.php')
 		.then(response => {
 			this.setState({
 				catalog: response.data

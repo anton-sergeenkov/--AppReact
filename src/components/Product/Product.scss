@@ -1,0 +1,27 @@
+@import './src/styles/vars';
+
+.wrapper {
+    padding: 50px;
+    font-family: sans-serif;
+    .name {
+        padding: 10px;
+        text-align: center;
+        font-weight: bold;
+        color: $color-text;
+        font-size: 18px;
+    }
+    .img {
+        display: block;
+        height: 400px;
+        margin: 10px auto;
+    }
+    .price {
+        padding: 10px;
+        text-align: center;
+        margin: 20px;
+    }
+    .description {
+        font-family: sans-serif;
+        line-height: 1.7;
+    }
+}
