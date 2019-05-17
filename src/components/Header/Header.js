@@ -5,7 +5,7 @@ import classes from './Header.scss';
 export default class Header extends Component {
 	render() {
 		return (
-			<div className={classes.wrapper}>
+			<div className={'wrapper' + ' ' + classes.wrapper}>
                 <Menu />
 			</div>
 		);

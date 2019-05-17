@@ -34,7 +34,7 @@ export default class Catalog extends Component {
 		);
 
 		return (
-			<div className={classes.wrapper}>
+			<div className={'wrapper' + ' ' + classes.wrapper}>
 				{items}
 			</div>
 		);

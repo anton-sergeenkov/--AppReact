@@ -23,7 +23,7 @@ export default class Catalog extends Component {
 		const product = this.state.product;
 
 		return(
-			<div className={classes.wrapper}>
+			<div className={'wrapper' + ' ' + classes.wrapper}>
 				<div className={classes.name}>{product.name}</div>
 				<img className={classes.img} src={product.img} alt={product.name} />
 				<div className={classes.price}>{product.price} USD</div>
