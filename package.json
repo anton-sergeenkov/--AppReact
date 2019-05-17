@@ -5,7 +5,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anton-sergeenkov/--AppReact.git"
+    "url": "git+https://github.com/anton-sergeenkov/react-app-guitar.git"
   },
   "scripts": {
     "start": "webpack-dev-server",

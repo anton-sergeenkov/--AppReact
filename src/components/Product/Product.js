@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import classes from './Product.scss';
+import { REQUEST_SERVER } from '../../constants.js';
 
 export default class Catalog extends Component {
 	constructor(props) {
@@ -10,7 +11,7 @@ export default class Catalog extends Component {
 		};
 	}
 	componentDidMount() {
-		axios.get('http://anton-sergeenkov.ru/app/json/index.php?id='+this.props.match.params.id)
+		axios.get(REQUEST_SERVER.URL+'?id='+this.props.match.params.id)
 		.then(response => {
 			this.setState({
 				product: response.data

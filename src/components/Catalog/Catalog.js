@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import classes from './Catalog.scss';
+import { REQUEST_SERVER } from '../../constants.js';
 
 export default class Catalog extends Component {
 	constructor(props) {
@@ -11,7 +12,7 @@ export default class Catalog extends Component {
 		};
 	}
 	componentDidMount() {
-		axios.get('http://anton-sergeenkov.ru/app/json/index.php')
+		axios.get(REQUEST_SERVER.URL)
 		.then(response => {
 			this.setState({
 				catalog: response.data
