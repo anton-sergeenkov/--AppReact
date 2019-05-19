@@ -24,8 +24,8 @@ export default class Catalog extends Component {
 
 		return(
 			<div className={'wrapper' + ' ' + classes.wrapper}>
-				<div className={classes.name}>{product.name}</div>
 				<img className={classes.img} src={product.img} alt={product.name} />
+				<div className={classes.name}>{product.name}</div>
 				<div className={classes.price}>{product.price} USD</div>
 				<div className={classes.description}>{product.description}</div>
 			</div>
