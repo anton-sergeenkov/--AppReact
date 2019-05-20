@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import classes from './Product.scss';
-import { REQUEST_SERVER } from '../../constants.js';
+import { REQUEST_SERVER } from '../../constants';
 
 export default class Catalog extends Component {
 	constructor(props) {

@@ -6,7 +6,7 @@ import { connect } from "react-redux";
 import { addCatalog } from "../../redux/actions";
 
 import classes from './Catalog.scss';
-import { REQUEST_SERVER } from '../../constants.js';
+import { REQUEST_SERVER } from '../../constants';
 
 class Catalog extends Component {
 	constructor(props) {
