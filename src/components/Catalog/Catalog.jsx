@@ -25,9 +25,9 @@ class Catalog extends Component {
 	render() {
 		const catalog = this.props.catalog;
 
+		var items = '';
 		if (catalog.length !== 0) {
-
-			var items = catalog.catalogList.map((item) =>
+			items = catalog.catalogList.map((item) =>
 				<Link to={`/catalog/${item.id}`} key={item.id}>
 					<div className={classes.element}>
 						<div className={classes.name}>{item.name}</div>
@@ -36,9 +36,6 @@ class Catalog extends Component {
 					</div>
 				</Link>
 			);
-
-		} else {
-			var items = '';
 		}
 
 		return (
