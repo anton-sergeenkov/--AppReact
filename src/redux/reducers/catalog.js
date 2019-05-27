@@ -1,8 +1,10 @@
-import { ADD_CATALOG } from "../actionTypes";
+import { GET_CATALOG } from "../actionTypes";
 
-const catalog = (state = [], action) => {
+const initialState = [];
+
+const catalog = (state = initialState, action) => {
     switch (action.type) {
-        case ADD_CATALOG: {
+        case GET_CATALOG: {
             return {
                 ...state, 
                 catalogList: action.payload

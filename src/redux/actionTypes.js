@@ -1,1 +1,1 @@
-export const ADD_CATALOG = "ADD_CATALOG";
+export const GET_CATALOG = "GET_CATALOG";

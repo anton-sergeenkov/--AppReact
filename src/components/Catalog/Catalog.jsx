@@ -1,12 +1,8 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
-
 import { connect } from "react-redux";
-import { addCatalog } from "../../redux/actions";
-
+import { getCatalog } from "../../redux/actions";
 import classes from './Catalog.scss';
-import { REQUEST_SERVER } from '../../constants';
 
 class Catalog extends Component {
 	constructor(props) {
@@ -16,11 +12,7 @@ class Catalog extends Component {
 		};
 	}
 	componentDidMount() {
-		axios.get(REQUEST_SERVER.URL)
-		.then(response => {
-			this.props.addCatalog(response.data);
-		})
-		.catch(error => console.log(error));
+		this.props.getCatalog();
 	}
 	render() {
 		const catalog = this.props.catalog;
@@ -50,7 +42,7 @@ const mapStateToProps = state => ({
 	catalog: state.catalog
 })
 const mapDispatchToProps = {
-	addCatalog
+	getCatalog
 }
 export default connect(
 	mapStateToProps,
