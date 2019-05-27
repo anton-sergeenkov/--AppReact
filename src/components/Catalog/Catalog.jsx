@@ -1,15 +1,13 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { connect } from "react-redux";
-import { getCatalog } from "../../redux/actions";
+import { connect } from 'react-redux';
+import { getCatalog } from '../../redux/actions';
+import CatalogSearch from '../CatalogSearch/CatalogSearch';
 import classes from './Catalog.scss';
 
 class Catalog extends Component {
 	constructor(props) {
 		super(props);
-		this.state = {
-			//
-		};
 	}
 	componentDidMount() {
 		this.props.getCatalog();
@@ -32,6 +30,7 @@ class Catalog extends Component {
 
 		return (
 			<div className={'wrapper' + ' ' + classes.wrapper}>
+				<CatalogSearch catalog={this.props.catalog}/>
 				{items}
 			</div>
 		);

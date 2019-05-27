@@ -1,0 +1,13 @@
+@import './src/styles/vars';
+
+.wrapper {
+    width: 100%;
+    padding: 20px 10px;
+}
+.search {
+    width: 400px;
+    padding: 10px;
+}
+.search:focus {
+    outline: 1px solid $color-brown;
+}

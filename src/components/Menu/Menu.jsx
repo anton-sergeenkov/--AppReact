@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import classes from './Menu.scss';
 import { NavLink } from 'react-router-dom';
 

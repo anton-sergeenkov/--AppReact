@@ -1,4 +1,4 @@
-import { GET_CATALOG } from "../actionTypes";
+import { GET_CATALOG } from '../actionTypes';
 
 const initialState = [];
 

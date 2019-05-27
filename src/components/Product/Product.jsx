@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import axios from 'axios';
 import classes from './Product.scss';
 import { REQUEST_SERVER } from '../../constants';
