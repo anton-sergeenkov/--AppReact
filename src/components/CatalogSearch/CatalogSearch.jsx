@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { setCatalogSearch } from '../../redux/actions';
 import classes from './CatalogSearch.scss';
 
 class CatalogSearch extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-			// catalog: ''
-		};
     }
-    // this.props.catalog.catalogList
-    // this.props.catalogStore.catalogList
+    // componentDidMount() {
+	// 	this.props.setCatalogSearch('test value');
+	// }
 	handleChange = (event) => {
-		console.log(event.target.value);
+        this.props.setCatalogSearch(event.target.value);
 	}
 	render() {
 		return (
@@ -28,11 +27,12 @@ class CatalogSearch extends Component {
 	}
 }
 
-const mapStateToProps = state => ({
-	catalogStore: state.catalog
-})
+
+const mapDispatchToProps = {
+	setCatalogSearch
+}
 export default connect(
-	mapStateToProps,
-	null
+	null,
+	mapDispatchToProps
 )(CatalogSearch);
 

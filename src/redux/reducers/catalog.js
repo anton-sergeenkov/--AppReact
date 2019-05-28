@@ -1,6 +1,9 @@
-import { GET_CATALOG } from '../actionTypes';
+import { GET_CATALOG, SET_CATALOG_SEARCH } from '../actionTypes';
 
-const initialState = [];
+const initialState = {
+    catalogList: [],
+    searchValue: ''
+};
 
 const catalog = (state = initialState, action) => {
     switch (action.type) {
@@ -9,6 +12,12 @@ const catalog = (state = initialState, action) => {
                 ...state, 
                 catalogList: action.payload
             };
+        }
+        case SET_CATALOG_SEARCH: {
+            return {
+                ...state, 
+                searchValue: action.payload
+            };  
         }
         default: {
             return state;

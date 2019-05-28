@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { REQUEST_SERVER } from '../constants';
-import { GET_CATALOG } from "./actionTypes";
+import { GET_CATALOG, SET_CATALOG_SEARCH } from "./actionTypes";
 
 export const getCatalog = function() {
     return function(dispatch) {
@@ -16,3 +16,8 @@ export const getCatalog = function() {
         
     }
 }
+
+export const setCatalogSearch = searchValue => ({
+    type: SET_CATALOG_SEARCH,
+    payload: { searchValue }
+})
