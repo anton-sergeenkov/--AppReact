@@ -19,5 +19,5 @@ export const getCatalog = function() {
 
 export const setCatalogSearch = searchValue => ({
     type: SET_CATALOG_SEARCH,
-    payload: { searchValue }
+    payload: searchValue
 })

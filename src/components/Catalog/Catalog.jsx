@@ -13,18 +13,21 @@ class Catalog extends Component {
 	componentDidMount() {
 		this.props.getCatalog();
 	}
-	filterName() {
-		//
+	filterName(catalogList, searchValue) {
+		return catalogList.filter(function(element) {
+			return element.name.toLowerCase().includes(searchValue.toLowerCase());
+		});
 	}
 	render() {
 		const catalogList = this.props.catalog.catalogList;
 		const searchValue = this.props.catalog.searchValue;
 
-		// const filteredCatalog = filterName(catalogList, searchValue);
-
 		var items = '';
 		if (catalogList.length !== 0) {
-			items = catalogList.map((item) =>
+
+			const filteredCatalog = this.filterName(catalogList, searchValue);
+
+			items = filteredCatalog.map((item) =>
 				<Link to={`/catalog/${item.id}`} key={item.id}>
 					<div className={classes.element}>
 						<div className={classes.name}>{item.name}</div>

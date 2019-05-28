@@ -18,6 +18,7 @@ class CatalogSearch extends Component {
                     onChange={this.handleChange} 
                     className={classes.search} 
                     placeholder="Enter the name of the guitar..." 
+                    autoFocus
                 />
             </div>
 		);
@@ -31,4 +32,3 @@ export default connect(
 	null,
 	mapDispatchToProps
 )(CatalogSearch);
-
