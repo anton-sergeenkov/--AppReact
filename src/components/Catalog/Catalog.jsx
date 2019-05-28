@@ -20,7 +20,7 @@ class Catalog extends Component {
 		let items = '';
 		if (catalogList.length !== 0) {
 
-			let filteredCatalog = catalogList.filter(function(element) {
+			let filteredCatalog = catalogList.filter(element => {
 				return element.name.toLowerCase().includes(searchValue.toLowerCase());
 			});
 
