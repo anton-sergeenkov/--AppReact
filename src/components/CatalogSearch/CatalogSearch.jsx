@@ -7,12 +7,9 @@ class CatalogSearch extends Component {
     constructor(props) {
         super(props);
     }
-    // componentDidMount() {
-	// 	this.props.setCatalogSearch('test value');
-	// }
 	handleChange = (event) => {
         this.props.setCatalogSearch(event.target.value);
-	}
+    }
 	render() {
 		return (
 			<div className={classes.wrapper}>
@@ -26,7 +23,6 @@ class CatalogSearch extends Component {
 		);
 	}
 }
-
 
 const mapDispatchToProps = {
 	setCatalogSearch

@@ -9,15 +9,22 @@ class Catalog extends Component {
 	constructor(props) {
 		super(props);
 	}
+
 	componentDidMount() {
 		this.props.getCatalog();
 	}
+	filterName() {
+		//
+	}
 	render() {
-		const catalog = this.props.catalog;
+		const catalogList = this.props.catalog.catalogList;
+		const searchValue = this.props.catalog.searchValue;
+
+		// const filteredCatalog = filterName(catalogList, searchValue);
 
 		var items = '';
-		if (catalog.length !== 0) {
-			items = catalog.catalogList.map((item) =>
+		if (catalogList.length !== 0) {
+			items = catalogList.map((item) =>
 				<Link to={`/catalog/${item.id}`} key={item.id}>
 					<div className={classes.element}>
 						<div className={classes.name}>{item.name}</div>
@@ -30,7 +37,7 @@ class Catalog extends Component {
 
 		return (
 			<div className={'wrapper' + ' ' + classes.wrapper}>
-				<CatalogSearch catalog={this.props.catalog}/>
+				<CatalogSearch />
 				{items}
 			</div>
 		);
