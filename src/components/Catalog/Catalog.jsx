@@ -12,7 +12,6 @@ class Catalog extends Component {
 	componentDidMount() {
 		this.props.getCatalog();
 	}
-
 	filterName() {
 		const catalogList = this.props.catalog.catalogList;
 		const searchValue = this.props.catalog.searchValue;
@@ -36,7 +35,6 @@ class Catalog extends Component {
 		}
 		return items;
 	}
-
 	render() {
 		return (
 			<div className={'wrapper' + ' ' + classes.wrapper}>
