@@ -1,10 +1,9 @@
 import axios from 'axios';
 import { REQUEST_SERVER } from '../constants';
-import { GET_CATALOG, SET_CATALOG_SEARCH } from "./actionTypes";
+import { GET_CATALOG, SET_CATALOG_SEARCH } from './actionTypes';
 
 export const getCatalog = function() {
     return function(dispatch) {
-
         axios.get(REQUEST_SERVER.URL)
 		.then(response => {
             dispatch({
@@ -13,7 +12,6 @@ export const getCatalog = function() {
             })
 		})
         .catch(error => console.log(error));
-        
     }
 }
 
