@@ -9,23 +9,20 @@ class Catalog extends Component {
 	constructor(props) {
 		super(props);
 	}
-
 	componentDidMount() {
 		this.props.getCatalog();
 	}
-	filterName(catalogList, searchValue) {
-		return catalogList.filter(function(element) {
-			return element.name.toLowerCase().includes(searchValue.toLowerCase());
-		});
-	}
-	render() {
+
+	filterName() {
 		const catalogList = this.props.catalog.catalogList;
 		const searchValue = this.props.catalog.searchValue;
 
-		var items = '';
+		let items = '';
 		if (catalogList.length !== 0) {
 
-			const filteredCatalog = this.filterName(catalogList, searchValue);
+			let filteredCatalog = catalogList.filter(function(element) {
+				return element.name.toLowerCase().includes(searchValue.toLowerCase());
+			});
 
 			items = filteredCatalog.map((item) =>
 				<Link to={`/catalog/${item.id}`} key={item.id}>
@@ -37,11 +34,14 @@ class Catalog extends Component {
 				</Link>
 			);
 		}
+		return items;
+	}
 
+	render() {
 		return (
 			<div className={'wrapper' + ' ' + classes.wrapper}>
 				<CatalogSearch />
-				{items}
+				{this.filterName()}
 			</div>
 		);
 	}
